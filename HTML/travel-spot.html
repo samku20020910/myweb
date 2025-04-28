@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/travel-spot.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <h1>花蓮旅遊指南</h1>
+        <div class="nav-right">
+            <a href="/HTML/index.html">首頁</a>
+            <a href="/HTML/schedule.html">查看行程</a>
+            <a href="/HTML/truck-loading.html">車輛分配系統</a>
+            <a href="/HTML/report.html">回報問題</a>
+        </div>
+    </nav>
+    <div class="travel-spot-info-adjust">
+        <form action="">
+            <select name="choose-spot" id="choose-spot" onchange="handleSelection(this.value)">
+                <option value="" disabled selected hidden>請選擇地點</option>
+                <option value="東大門夜市">東大門夜市</option>
+                <option value="七星潭">七星潭</option>
+                <option value="太魯閣國家公園">太魯閣國家公園</option>
+                <option value="慕谷慕魚">慕谷慕魚</option>
+                <option value="新光兆豐休閒農場">新光兆豐休閒農場</option>
+                <option value="鯉魚潭">鯉魚潭</option>
+                <option value="林田山業文化園區">林田山業文化園區</option>
+                <option value="石梯坪">石梯坪</option>
+                <option value="遠雄海洋公園">遠雄海洋公園</option>
+                <option value="翡翠谷">翡翠谷</option>
+                <option value="四八高地">四八高地</option>
+            </select>
+        </form>
+        <div class="travel-spot-info"></div>
+        <div class="weather-adjust">
+
+        </div>
+    </div>
+    
+    <script src="/JS/travel-spot.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/JS/weather.js"></script> 
+</body>
+</html>

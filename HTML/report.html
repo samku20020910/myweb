@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>回報問題 - 花蓮旅遊指南</title>
+        <link rel="stylesheet" href="/CSS/report.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <h1>花蓮旅遊指南</h1>
+            <div class="nav-right">
+                <a href="/HTML/index.html">首頁</a>
+                <a href="/HTML/schedule.html">查看行程</a>
+                <a href="/HTML/truck-loading.html">車輛分配系統</a>
+                <a href="/HTML/report.html">回報問題</a>
+            </div>
+        </nav>
+        <div class="home-info">
+            <h2>回報問題</h2>
+            <form id="issueForm">
+                <div class="form-group">
+                   
+                    <label for="name">您的名字:</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        placeholder="請輸入您的名字" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    
+                    <label for="email">您的電子郵件:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="請輸入您的電子郵件" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                   
+                    <label for="issueType">問題類型:</label>
+                    <select 
+                        id="issueType" 
+                        name="issueType" 
+                        required
+                    >
+                        <option value="">請選擇問題類型</option>
+                        <option value="bug">網站錯誤</option>
+                        <option value="feedback">功能建議</option>
+                        <option value="other">其他問題</option> 
+                    </select>
+                </div>
+
+                <div class="form-group">
+                   
+                    <label for="description">問題描述:</label>
+                    <textarea 
+                        id="description" 
+                        name="description" 
+                        rows="5" 
+                        placeholder="請描述您的問題" 
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit">提交</button>
+            </form>
+            <div id="message" class="message"></div>
+        </div>
+        <script src="/JS/report.js"></script>
+    </body>
+</html>

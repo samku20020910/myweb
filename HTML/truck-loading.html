@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>花蓮旅遊指南與卡車載重分配系統</title>
+  
+  <link rel="stylesheet" href="/CSS/truck-loading.css">
+  <link rel="stylesheet" href="/CSS/schedule.css">
+  
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <nav>
+    <h1>花蓮旅遊指南</h1>
+    <div class="nav-right">
+      <a href="/HTML/index.html">首頁</a>
+      <a href="/HTML/travel-spot.html">景點資訊</a>
+      <a href="/HTML/schedule.html">查看行程</a>
+      <a href="/HTML/truck-loading.html">車輛分配系統</a>
+      <a href="/HTML/report.html">回報問題</a>
+    </div>
+  </nav>
+
+
+
+ 
+   <div class="adjust">
+    <div id="schedule-container">
+    
+      <h2>車輛載重分配系統</h2>
+      <div id="inputArea">
+        <label for="passengerCounts">乘客人數 (以逗號分隔)：</label>
+        <input type="text" id="passengerCounts" placeholder="例如：3, 5, 2">
+        <br>
+        <label for="truckCapacities">車輛最大座位數 (以逗號分隔)：</label>
+        <input type="text" id="truckCapacities" placeholder="例如：6, 4, 8">
+        <br>
+        <button onclick="calculateAllocation()">計算分配</button>
+      </div>
+  
+      <h2>分配結果</h2>
+      <div id="results"></div>
+    </div>
+   </div>
+
+  
+  <script src="/JS/truck-loading.js"></script>
+  
+</body>
+</html>
